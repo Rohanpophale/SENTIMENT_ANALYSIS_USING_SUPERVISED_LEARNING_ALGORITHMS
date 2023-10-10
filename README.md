@@ -9,9 +9,9 @@ The system focuses on the development and evaluation of a sentiment analysis sys
 
 <h3>METHODOLOGY</h3>
 
-<img width="800" alt="output" src="https://github.com/Rohanpophale/SENTIMENT_ANALYSIS_USING_SUPERVISED_LEARNING_ALGORITHMS/assets/97818946/461b59a3-d36d-46a4-ad43-342d12d76e3e">
+<img width="800" alt="output" src="https://github.com/Rohanpophale/SENTIMENT_ANALYSIS_USING_SUPERVISED_LEARNING_ALGORITHMS/assets/97818946/f2060b07-c825-4c83-bda7-6bc9b843acd4">
 
-<img width="800" alt="landing page" src="https://github.com/Rohanpophale/SENTIMENT_ANALYSIS_USING_SUPERVISED_LEARNING_ALGORITHMS/assets/97818946/dd5f7a60-c57f-40ae-a59c-3ab5d0969b1a">
+<img width="800" alt="landing page" src="https://github.com/Rohanpophale/SENTIMENT_ANALYSIS_USING_SUPERVISED_LEARNING_ALGORITHMS/assets/97818946/4d2529ef-d1e3-493b-8ecb-b5d4651d4342">
 
 <h3>RESULT</h3>
 
