@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SENTIMENT ANALYSIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #6A9C89;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #113946;
+            margin: 30px 0;
+        }
+
+        form {
+            width: 70%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #BCA37F;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        label {
+            font-weight: bold;
+            color: #113946;
+        }
+
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #113946;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #113946;
+            color: #BCA37F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0c2a34;
+            color: #BCA37F;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+        }
+
+        h2 {
+            color: #BCA37F;
+            margin-top: 20px;
+        }
+
+        p {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .result-container {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s, transform 0.5s;
+            background-color: #113946;
+            color: #BCA37F;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto; /* Center horizontally */
+            width: 300px;
+            height: 100PX;
+        }
+
+        .result-container.show-result {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form method="POST" id="sentiment-form">
+        <label for="input_text">Enter Text for Sentiment Analysis:</label>
+        <textarea name="input_text" id="input_text" rows="4" cols="40" placeholder="Type your text here..."></textarea>
+        <br>
+        <input type="submit" value="Analyze">
+    </form>
+    
+    <div class="result-container" id="result-container">
+        <h2>Result:</h2>
+        <p class="positive" id="positive">Positive</p>
+        <p class="negative" id="negative">Negative</p>
+        <p class="neutral" id="neutral">Neutral</p>
+    </div>
+    
+    <script>
+        document.getElementById("sentiment-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const inputText = document.getElementById("input_text").value;
+
+            // Simulate sentiment analysis with a delay
+            setTimeout(function () {
+                const resultContainer = document.getElementById("result-container");
+                const positive = document.getElementById("positive");
+                const negative = document.getElementById("negative");
+                const neutral = document.getElementById("neutral");
+
+                // Randomly choose a sentiment
+                const sentiments = ["Positive", "Negative", "Neutral"];
+                const randomSentiment = sentiments[Math.floor(Math.random() * sentiments.length)];
+
+                // Display the sentiment result with animation
+                positive.style.display = "none";
+                negative.style.display = "none";
+                neutral.style.display = "none";
+
+                if (randomSentiment === "Positive") {
+                    positive.style.display = "block";
+                } else if (randomSentiment === "Negative") {
+                    negative.style.display = "block";
+                } else {
+                    neutral.style.display = "block";
+                }
+
+                resultContainer.classList.add("show-result");
+            }, 500); // Simulate a 2-second delay
+        });
+    </script>
+</body>
+</html>
+
+
+
